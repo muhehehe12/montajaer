@@ -1,20 +1,30 @@
 /* ============================================
-   MARIUS AC — style.css
-   Arctic Blue Theme
+   CLIMA FREON — style.css
+   Light Navy & Emerald Green Theme (Light Mode)
    ============================================ */
 
 :root {
-    --deep: #0A1628;
-    --deep2: #0D1F3C;
-    --glacier: #1E6FA5;
-    --frost: #7EC8E3;
-    --ice: #E8F4FD;
-    --silver: #B8D4E8;
+    --deep: #EBF3F9;
+    /* Fundal general - Bleu marin extrem de deschis și luminos */
+    --deep2: #D1E4F2;
+    /* Fundal secundar pentru secțiuni - Bleu marin deschis curat */
+    --glacier: #124E3F;
+    /* Verde închis pentru gradients și texte pe fundal deschis */
+    --frost: #2ECC71;
+    /* Verde smarald luminos pentru accente și butoane */
+    --ice: #FFFFFF;
+    /* Alb pur pentru carduri și elemente izolate */
+    --silver: #4A6577;
+    /* Bleu marin închis/șters pentru text secundar și subtitluri */
     --white: #FFFFFF;
-    --card-bg: rgba(14, 30, 60, 0.7);
-    --card-border: rgba(126, 200, 227, 0.18);
-    --text-main: #E8F4FD;
-    --text-muted: #7EA8C4;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    /* Carduri albe, luminoase și semi-transparente */
+    --card-border: rgba(46, 204, 113, 0.25);
+    /* Border fin cu tentă verde */
+    --text-main: #1C3144;
+    /* Bleu marin foarte închis pentru text principal (lizibilitate maximă) */
+    --text-muted: #567084;
+    /* Text secundar șters */
     --radius: 16px;
     --radius-sm: 10px;
     --nav-h: 70px;
@@ -90,7 +100,7 @@ ul {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.85rem;
     letter-spacing: 0.15em;
-    color: var(--frost);
+    color: var(--glacier);
     text-transform: uppercase;
 }
 
@@ -108,7 +118,7 @@ ul {
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.35;
+    opacity: 0.4;
 }
 
 /* ============================================
@@ -129,9 +139,10 @@ ul {
 }
 
 #navbar.scrolled {
-    background: rgba(10, 22, 40, 0.92);
+    background: rgba(235, 243, 249, 0.94);
     backdrop-filter: blur(16px);
-    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 20px rgba(28, 49, 68, 0.1);
+    border-bottom: 1px solid var(--card-border);
 }
 
 .nav-logo {
@@ -141,13 +152,13 @@ ul {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
-    color: var(--white);
+    color: var(--text-main);
     letter-spacing: 0.02em;
 }
 
 .nav-logo strong {
     font-weight: 900;
-    color: var(--frost);
+    color: var(--glacier);
 }
 
 .nav-snowflake {
@@ -166,7 +177,7 @@ ul {
 .nav-links a {
     font-family: 'Inter', sans-serif;
     font-size: 0.88rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--silver);
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -188,7 +199,7 @@ ul {
 }
 
 .nav-links a:hover {
-    color: var(--white);
+    color: var(--text-main);
 }
 
 .nav-links a:hover::after {
@@ -201,8 +212,8 @@ ul {
 
 .lang-toggle {
     background: transparent;
-    border: 1.5px solid var(--card-border);
-    color: var(--frost);
+    border: 1.5px solid var(--text-muted);
+    color: var(--text-main);
     font-family: 'Montserrat', sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
@@ -214,7 +225,7 @@ ul {
 }
 
 .lang-toggle:hover {
-    background: rgba(126, 200, 227, 0.12);
+    background: rgba(46, 204, 113, 0.12);
     border-color: var(--frost);
 }
 
@@ -242,7 +253,7 @@ ul {
     display: block;
     width: 24px;
     height: 2px;
-    background: var(--frost);
+    background: var(--glacier);
     transition: transform 0.3s, opacity 0.3s;
     border-radius: 2px;
 }
@@ -279,22 +290,22 @@ ul {
 
 .btn-primary {
     background: linear-gradient(135deg, var(--glacier), var(--frost));
-    color: var(--deep);
+    color: var(--white);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(126, 200, 227, 0.35);
+    box-shadow: 0 8px 28px rgba(46, 204, 113, 0.3);
 }
 
 .btn-outline {
     background: transparent;
-    border: 2px solid var(--frost);
-    color: var(--frost);
+    border: 2px solid var(--glacier);
+    color: var(--glacier);
 }
 
 .btn-outline:hover {
-    background: rgba(126, 200, 227, 0.1);
+    background: rgba(18, 78, 63, 0.06);
     transform: translateY(-2px);
 }
 
@@ -307,8 +318,8 @@ ul {
     letter-spacing: 0.06em;
     padding: 11px 24px;
     border-radius: 50px;
-    border: 2px solid var(--frost);
-    color: var(--frost);
+    border: 2px solid var(--glacier);
+    color: var(--glacier);
     background: transparent;
     cursor: pointer;
     transition: background 0.2s, transform 0.2s;
@@ -316,7 +327,7 @@ ul {
 }
 
 .btn-outline-sm:hover {
-    background: rgba(126, 200, 227, 0.1);
+    background: rgba(18, 78, 63, 0.06);
     transform: translateY(-2px);
 }
 
@@ -369,30 +380,31 @@ ul {
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--frost);
+    color: var(--glacier);
     margin-bottom: 20px;
     display: block;
 }
 
 #hero h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-size: clamp(2.3rem, 4.5vw, 3.8rem);
+    /* Măsură redusă conform cerinței */
     font-weight: 900;
-    line-height: 1.05;
-    color: var(--white);
+    line-height: 1.1;
+    color: var(--text-main);
     margin-bottom: 24px;
-    background: linear-gradient(135deg, var(--white) 40%, var(--frost));
+    background: linear-gradient(135deg, var(--text-main) 60%, var(--glacier));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .hero-sub {
-    font-size: 1.05rem;
-    line-height: 1.7;
+    font-size: 0.98rem;
+    line-height: 1.6;
     color: var(--silver);
     margin-bottom: 36px;
-    max-width: 440px;
+    max-width: 460px;
 }
 
 .hero-cta {
@@ -401,24 +413,32 @@ ul {
     flex-wrap: wrap;
 }
 
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .hero-img-frame {
     position: relative;
     border-radius: var(--radius);
     overflow: hidden;
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
+    background: var(--ice);
+    border: 1px solid rgba(28, 49, 68, 0.1);
+    box-shadow: 0 15px 40px rgba(28, 49, 68, 0.08);
     backdrop-filter: blur(10px);
     padding: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .hero-img-frame img {
     max-height: 380px;
     object-fit: contain;
     width: 100%;
-    filter: drop-shadow(0 20px 40px rgba(30, 111, 165, 0.4));
+    filter: drop-shadow(0 15px 30px rgba(18, 78, 63, 0.15));
 }
 
 .hero-badge {
@@ -426,7 +446,7 @@ ul {
     bottom: 20px;
     right: 20px;
     background: linear-gradient(135deg, var(--glacier), var(--frost));
-    color: var(--deep);
+    color: var(--white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: 0.8rem;
@@ -446,7 +466,7 @@ ul {
 .scroll-dot {
     width: 6px;
     height: 6px;
-    background: var(--frost);
+    background: var(--glacier);
     border-radius: 50%;
     animation: scrollBounce 1.8s ease-in-out infinite;
 }
@@ -472,8 +492,9 @@ ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0;
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
+    background: var(--ice);
+    border: 1px solid rgba(28, 49, 68, 0.08);
+    box-shadow: 0 10px 30px rgba(28, 49, 68, 0.05);
     backdrop-filter: blur(16px);
     margin: 0 5%;
     border-radius: var(--radius);
@@ -492,7 +513,7 @@ ul {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.8rem;
     font-weight: 900;
-    color: var(--white);
+    color: var(--text-main);
     display: inline-block;
 }
 
@@ -514,7 +535,7 @@ ul {
 
 .stat-divider {
     width: 1px;
-    background: var(--card-border);
+    background: rgba(28, 49, 68, 0.08);
     margin: 8px 0;
 }
 
@@ -538,7 +559,7 @@ section {
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--frost);
+    color: var(--glacier);
     display: block;
     margin-bottom: 12px;
 }
@@ -547,7 +568,7 @@ section {
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 900;
-    color: var(--white);
+    color: var(--text-main);
     line-height: 1.1;
 }
 
@@ -555,7 +576,7 @@ section {
    SERVICES
    ============================================ */
 #services {
-    background: rgba(13, 31, 60, 0.5);
+    background: var(--deep2);
 }
 
 .services-grid {
@@ -565,18 +586,19 @@ section {
 }
 
 .service-card {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
+    background: var(--ice);
+    border: 1px solid rgba(28, 49, 68, 0.06);
     border-radius: var(--radius);
     padding: 36px 28px;
+    box-shadow: 0 8px 24px rgba(28, 49, 68, 0.03);
     backdrop-filter: blur(10px);
     transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 .service-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(126, 200, 227, 0.4);
-    box-shadow: 0 16px 48px rgba(30, 111, 165, 0.2);
+    border-color: var(--frost);
+    box-shadow: 0 12px 32px rgba(28, 49, 68, 0.08);
 }
 
 .service-icon {
@@ -585,11 +607,22 @@ section {
     margin-bottom: 20px;
 }
 
+.service-icon svg line,
+.service-icon svg rect,
+.service-icon svg circle,
+.service-icon svg path {
+    stroke: var(--glacier) !important;
+}
+
+.service-icon svg [fill="#7EC8E3"] {
+    fill: var(--frost) !important;
+}
+
 .service-card h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--white);
+    color: var(--text-main);
     margin-bottom: 12px;
 }
 
@@ -610,10 +643,11 @@ section {
 }
 
 .price-card {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
+    background: var(--ice);
+    border: 1px solid rgba(28, 49, 68, 0.08);
     border-radius: var(--radius);
     padding: 36px 28px;
+    box-shadow: 0 8px 24px rgba(28, 49, 68, 0.03);
     backdrop-filter: blur(10px);
     position: relative;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -621,11 +655,12 @@ section {
 
 .price-card:hover {
     transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(28, 49, 68, 0.08);
 }
 
 .price-card.featured {
     border-color: var(--frost);
-    box-shadow: 0 0 40px rgba(126, 200, 227, 0.15), inset 0 0 40px rgba(30, 111, 165, 0.08);
+    box-shadow: 0 10px 30px rgba(46, 204, 113, 0.12);
 }
 
 .price-badge {
@@ -634,7 +669,7 @@ section {
     left: 50%;
     transform: translateX(-50%);
     background: linear-gradient(135deg, var(--glacier), var(--frost));
-    color: var(--deep);
+    color: var(--white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: 0.72rem;
@@ -656,7 +691,7 @@ section {
     font-family: 'Montserrat', sans-serif;
     font-size: 3.5rem;
     font-weight: 900;
-    color: var(--white);
+    color: var(--text-main);
     line-height: 1;
 }
 
@@ -664,14 +699,14 @@ section {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 1.1rem;
-    color: var(--frost);
+    color: var(--glacier);
 }
 
 .price-card h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 700;
-    color: var(--white);
+    color: var(--text-main);
     margin-bottom: 4px;
 }
 
@@ -718,7 +753,7 @@ section {
    GALLERY
    ============================================ */
 #gallery {
-    background: rgba(13, 31, 60, 0.5);
+    background: var(--deep2);
 }
 
 .gallery-grid {
@@ -734,6 +769,8 @@ section {
     position: relative;
     cursor: pointer;
     aspect-ratio: 4/3;
+    border: 1px solid rgba(28, 49, 68, 0.06);
+    box-shadow: 0 4px 15px rgba(28, 49, 68, 0.03);
 }
 
 .gallery-item.featured-item {
@@ -757,7 +794,7 @@ section {
 .gallery-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(10, 22, 40, 0.85) 0%, transparent 50%);
+    background: linear-gradient(to top, rgba(28, 49, 68, 0.85) 0%, transparent 50%);
     display: flex;
     align-items: flex-end;
     padding: 16px;
@@ -798,16 +835,17 @@ section {
     display: flex;
     gap: 16px;
     align-items: center;
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
+    background: var(--ice);
+    border: 1px solid rgba(28, 49, 68, 0.08);
     border-radius: var(--radius-sm);
     padding: 20px 24px;
+    box-shadow: 0 4px 15px rgba(28, 49, 68, 0.02);
     backdrop-filter: blur(10px);
     transition: border-color 0.2s, transform 0.2s;
 }
 
 .contact-card:hover {
-    border-color: rgba(126, 200, 227, 0.4);
+    border-color: var(--frost);
     transform: translateX(4px);
 }
 
@@ -815,6 +853,11 @@ section {
     width: 36px;
     height: 36px;
     flex-shrink: 0;
+}
+
+.contact-icon svg path,
+.contact-icon svg circle {
+    stroke: var(--glacier) !important;
 }
 
 .contact-label {
@@ -829,12 +872,12 @@ section {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 1rem;
-    color: var(--white);
+    color: var(--text-main);
     transition: color 0.2s;
 }
 
 a.contact-value:hover {
-    color: var(--frost);
+    color: var(--glacier);
 }
 
 .contact-cta {
@@ -843,19 +886,20 @@ a.contact-value:hover {
 }
 
 .note-box {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
+    background: var(--ice);
+    border: 1px solid rgba(28, 49, 68, 0.08);
     border-radius: var(--radius);
     padding: 36px;
+    box-shadow: 0 8px 24px rgba(28, 49, 68, 0.02);
     backdrop-filter: blur(10px);
-    border-left: 3px solid var(--frost);
+    border-left: 4px solid var(--glacier);
 }
 
 .note-box h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--white);
+    color: var(--text-main);
     margin-bottom: 20px;
 }
 
@@ -888,11 +932,16 @@ a.contact-value:hover {
    FOOTER
    ============================================ */
 footer {
-    background: rgba(10, 22, 40, 0.95);
-    border-top: 1px solid var(--card-border);
+    background: var(--ice);
+    border-top: 1px solid rgba(28, 49, 68, 0.08);
     padding: 40px 8%;
     position: relative;
     z-index: 1;
+}
+
+footer svg line,
+footer svg circle {
+    stroke: var(--glacier) !important;
 }
 
 .footer-inner {
@@ -909,11 +958,11 @@ footer {
     gap: 10px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.1rem;
-    color: var(--white);
+    color: var(--text-main);
 }
 
 .footer-logo strong {
-    color: var(--frost);
+    color: var(--glacier);
     font-weight: 900;
 }
 
@@ -925,13 +974,13 @@ footer {
 .footer-phone a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: var(--frost);
+    color: var(--glacier);
     font-size: 0.95rem;
     transition: color 0.2s;
 }
 
 .footer-phone a:hover {
-    color: var(--white);
+    color: var(--text-main);
 }
 
 /* ============================================
@@ -951,10 +1000,10 @@ footer {
         top: var(--nav-h);
         left: 0;
         right: 0;
-        background: rgba(10, 22, 40, 0.97);
+        background: rgba(235, 243, 249, 0.98);
         backdrop-filter: blur(20px);
         padding: 32px 5%;
-        border-bottom: 1px solid var(--card-border);
+        border-bottom: 1px solid rgba(28, 49, 68, 0.08);
     }
 
     .lang-toggle-li {
